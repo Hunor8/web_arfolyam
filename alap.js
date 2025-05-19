@@ -25,3 +25,21 @@ function megjelenitGBP(y){
     document.getElementById("gbp").innerHTML=y.rates.HUF+" Ft"
 }
 
+fetch ("https://api.exchangerate-api.com/v4/latest/ron")
+.then (x => x.json())
+.then (y => megjelenitRON(y))
+
+function megjelenitRON(y){
+    console.log(y)
+    document.getElementById("ron").innerHTML=y.rates.HUF+" Ft"
+}
+
+fetch ("https://api.exchangerate-api.com/v4/latest/cny")
+.then (x => x.json())
+.then (y => megjelenitCNY(y))
+
+function megjelenitCNY(y){
+    console.log(y)
+    document.getElementById("cny").innerHTML=y.rates.HUF+" Ft"
+}
+
